@@ -19,7 +19,7 @@ def example_1(n=10000, dim=1, A=0):
 def example_2(n=10000, dim=1, sigma=1):
     x1 = torch.randn(n, dim)*sigma
     x2 = x1 + torch.randn(n, dim)
-    y = 2* x1 + torch.randn(n, dim)*sigma
+    y = x1 + torch.randn(n, dim)*sigma
     x3 = y + torch.randn(n, dim)
     return torch.cat((x1, x2, x3), 1), y 
 
